@@ -1,0 +1,38 @@
+Roll No: <36>
+-- Name: <Nihad Abdulla V A>
+-- Program: <Assignment 2 >
+-- 
+
+
+--
+-- Table structure for table <Teaches>
+--
+
+create table Teaches(fno int(5) not null,sname varchar(15) not null,sdate date not null,edate date not null,primary key(fno,sname),foreign key(fno) references faculty(fno),foreign key(sname)references subject(sname));
+ 
+alter table subject add duration int;
+alter table faculty modify column specialization varchar(25);
+alter table subject drop column sdate;
+alter table subject drop column edate;
+--
+-- Dumping data for table <faculty>
+--
+-- --------insert/update statement commands-----------
+insert into faculty values(01,'nihad','2021-03-1','systemmanagment');
+insert into faculty values(02,'ram','2021-03-2','network');
+insert into faculty values(03,'Sam','2021-04-3','developer');
+insert into faculty values(04,'Akhil','2021-04-4','developer');
+insert into faculty values(05,'Nihal','2021-05-3','network');
+
+-- Dumping data for table <subject>
+--
+insert into subject values('Shan','2010-06-20','2020-06-29','101',01);
+insert into subject values('jan','2010-06-22','2020-06-22','102',02);
+insert into subject values('Nihad','2010-06-23','2020-06-23','103',03);
+insert into subject values('Ashiq','2010-06-24','2020-06-24','104',04);
+insert into subject values('Jasim','2010-06-25','2020-06-25','105',05);
+-- SQl Query Statements
+--
+
+-- -----SQL query statments preceeded by the its question-------- # This line may be removed in the actual file
+-- -----Question number should be commented---------------#This line may be removed in the actual file
